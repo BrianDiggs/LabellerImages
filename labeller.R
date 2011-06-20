@@ -39,7 +39,7 @@ mpg4 <- transform(mpg2,
     cyl = factor(cyl, levels=c(4,6,8),
         labels=c("These are cars that have 4 cylinders",
             "These are other cars that have 6 cylinders",
-            "Here are some 8 cylinder cars if you want that may cylinders")))
+            "Here are some 8 cylinder cars if you want that many cylinders")))
 
 (p %+% mpg4) + facet_grid(drv ~ cyl, labeller=label_wrap)
 ggsave(filename = "label_wrap.png")
