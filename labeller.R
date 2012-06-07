@@ -1,4 +1,5 @@
 library("ggplot2")
+library("plyr")
 
 mpg2 <- subset(mpg, cyl != 5 & drv %in% c("4", "f"))
 p <- qplot(cty, hwy, data = mpg2)
